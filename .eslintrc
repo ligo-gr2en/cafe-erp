@@ -1,0 +1,37 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "codeFrame": false
+  },
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "max-len": ["error", {"code":  100}],
+    "indent": ["error", 2],
+    "semi": ["error", "always"],
+    "quotes": ["error", "single"],
+    "comma-dangle": ["error", "always-multiline"],
+    "object-curly-spacing": ["error", "always"],
+    "prefer-promise-reject-errors": ["off"],
+    "no-return-assign": ["off"],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "radix": ["error", "as-needed"],
+    "no-plusplus": "off",
+    "react/jsx-filename-extension": ["off"],
+    "react/prop-types": ["off"],
+    "react/jsx-props-no-spreading": ["error", {"custom": "ignore"}],
+    "react/jsx-tag-spacing": ["error", {
+      "closingSlash": "never",
+      "beforeSelfClosing": "always",
+      "afterOpening": "never",
+      "beforeClosing": "never"
+    }],
+    "react/jsx-closing-bracket-location": ["error", "after-props"]
+  }
+}
