@@ -1,22 +1,22 @@
 import styled from 'styled-components';
 
 export default styled.button`
-  height: 48px;
-  width: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: #dadada;
   text-decoration: none;
+  cursor: pointer;
   background: none;
-  color: #DADADA;
   border: none;
   border-radius: 50%;
-  cursor: pointer;
-  transition: 0.3s all cubic-bezier(0.4, 0.0, 0.2, 1);
+  transition: .3s all cubic-bezier(.4, , .2, 1);
 
   &:hover,
   &:focus {
-    background-color: white;
-    color: #2A2D34;
+    color: #2a2d34;
+    background-color: #fff;
   }
 `;
