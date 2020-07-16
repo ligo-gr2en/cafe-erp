@@ -23,7 +23,7 @@ const Content = styled.div`
   margin-bottom: 16px;
 `;
 
-const App = (props) => {
+const App = () => {
   return (
     <Wrapper>
       <Router>
