@@ -15,22 +15,12 @@ const Wrapper = styled.div`
   background-color: #fff;
 `;
 
-const Content = styled.div`
-  width: 100%;
-  margin-top: 16px;
-  margin-right: 16px;
-  margin-bottom: 16px;
-  margin-left: 32px;
-`;
-
 const App = () => {
   return (
     <Wrapper>
       <Router>
         <Navbar />
-        <Content>
-          <Routes />
-        </Content>
+        <Routes />
       </Router>
     </Wrapper>
   );
