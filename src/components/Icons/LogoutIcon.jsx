@@ -1,7 +1,9 @@
 import React from 'react';
 
-export default () => {
+const LogoutIcon = () => {
   return (
     <i className="material-icons">exit_to_app</i>
   );
 };
+
+export default LogoutIcon;

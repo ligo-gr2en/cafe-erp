@@ -5,12 +5,7 @@ import NavListItem from './NavListItem';
 import NavbarLink from './NavbarLink';
 import Logo from './Logo';
 import LogoutButton from './LogoutButton';
-import HomeIcon from '../Icons/Home';
-import ProductsIcon from '../Icons/Products';
-import UnitsIcon from '../Icons/Units';
-import WalletsIcon from '../Icons/Wallets';
-import TransactionIcon from '../Icons/Transaction';
-import LogoutIcon from '../Icons/Logout';
+import { HomeIcon, ProductIcon, UnitIcon, WalletIcon, TransactionIcon, LogoutIcon } from '../Icons';
 
 const Container = styled.div`
   box-sizing: border-box;
@@ -26,7 +21,7 @@ const Container = styled.div`
   border-radius: 24px;
 `;
 
-export default () => {
+const Navbar = () => {
   return (
     <Container>
       <Logo />
@@ -39,17 +34,17 @@ export default () => {
         </NavListItem>
         <NavListItem>
           <NavbarLink to="/products" activeClassName="selected">
-            <ProductsIcon />
+            <ProductIcon />
           </NavbarLink>
         </NavListItem>
         <NavListItem>
           <NavbarLink to="/units" activeClassName="selected">
-            <UnitsIcon />
+            <UnitIcon />
           </NavbarLink>
         </NavListItem>
         <NavListItem>
           <NavbarLink to="/wallets" activeClassName="selected">
-            <WalletsIcon />
+            <WalletIcon />
           </NavbarLink>
         </NavListItem>
         <NavListItem>
@@ -65,3 +60,5 @@ export default () => {
     </Container>
   );
 };
+
+export default Navbar;

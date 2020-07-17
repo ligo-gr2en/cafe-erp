@@ -1,7 +1,9 @@
 import React from 'react';
 
-export default () => {
+const Transactions = () => {
   return (
     <h1>Транзакции</h1>
   );
 };
+
+export default Transactions;

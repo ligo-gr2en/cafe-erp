@@ -1,7 +1,9 @@
 import React from 'react';
 
-export default () => {
+const Wallets = () => {
   return (
     <h1>Кошельки</h1>
   );
 };
+
+export default Wallets;

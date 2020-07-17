@@ -1,7 +1,9 @@
 import React from 'react';
 
-export default () => {
+const ProductIcon = () => {
   return (
     <i className="material-icons">category</i>
   );
 };
+
+export default ProductIcon;

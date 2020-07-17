@@ -1,7 +1,9 @@
 import React from 'react';
 
-export default () => {
+const HomeIcon = () => {
   return (
     <i className="material-icons">home</i>
   );
 };
+
+export default HomeIcon;

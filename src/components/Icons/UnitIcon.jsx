@@ -1,7 +1,9 @@
 import React from 'react';
 
-export default () => {
+const UnitIcon = () => {
   return (
     <i className="material-icons">straighten</i>
   );
 };
+
+export default UnitIcon;
