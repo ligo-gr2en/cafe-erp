@@ -23,6 +23,7 @@
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
     "radix": ["error", "as-needed"],
     "no-plusplus": "off",
+    "eol-last": ["error", "always"],
     "react/jsx-filename-extension": ["off"],
     "react/prop-types": ["off"],
     "react/jsx-props-no-spreading": ["error", {"custom": "ignore"}],
