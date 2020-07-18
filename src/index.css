@@ -42,3 +42,21 @@ h1 {
 .fade-exit.fade-exit-active {
   opacity: 0;
 }
+
+.slide-in-appear,
+.slide-in-enter {
+  transform: translateZ(-1400px);
+  opacity: 0;
+}
+
+.slide-in-appear-active,
+.slide-in-enter.slide-in-enter-active {
+  transform: translateZ(0);
+  opacity: 1;
+  transition: opacity 300ms ease-out 100ms;
+}
+
+.slide-in-exit.slide-in-exit-active {
+  transform: translateZ(-1400px);
+  opacity: 0;
+}

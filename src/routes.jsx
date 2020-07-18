@@ -33,8 +33,8 @@ export default () => {
     <Route render={({ location }) => (
       <TransitionGroup component={Content}>
         <CSSTransition
-          timeout={450}
-          classNames="fade"
+          timeout={400}
+          classNames="slide-in"
           key={location.pathname}>
           <Switch location={location}>
             <Route exact path="/" component={HomeScene} />
