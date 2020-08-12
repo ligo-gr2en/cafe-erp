@@ -1,28 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import styled from 'styled-components';
-import { Navbar } from './components';
-import Routes from './routes';
-
-const Wrapper = styled.div`
-  box-sizing: border-box;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  padding: 16px;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: #fff;
-`;
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Home, Products, Units, Wallets, Transactions } from './pages';
 
 const App = () => {
   return (
-    <Wrapper>
+    <div>
       <Router>
-        <Navbar />
-        <Routes />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/products" component={Products} />
+          <Route path="/units" component={Units} />
+          <Route path="/wallets" component={Wallets} />
+          <Route path="/transactions" component={Transactions} />
+        </Switch>
       </Router>
-    </Wrapper>
+    </div>
   );
 };
 
