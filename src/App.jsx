@@ -1,10 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { Home, Products, Units, Wallets, Transactions } from './pages';
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: '"Open Sans", sans-serif',
+  },
+});
 
 const App = () => {
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
@@ -14,7 +21,7 @@ const App = () => {
           <Route path="/transactions" component={Transactions} />
         </Switch>
       </Router>
-    </div>
+    </ThemeProvider>
   );
 };
 
