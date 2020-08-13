@@ -1,0 +1,55 @@
+.Navbar {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: $dark;
+  border-radius: 1.5rem;
+
+  .Nav {
+    width: 100%;
+
+    &-Item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 3rem;
+      margin-bottom: 1px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-Link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3rem;
+      height: 3rem;
+      color: #dadada;
+      border-radius: 50%;
+      transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+      &:hover,
+      &:focus {
+        background-color: rgba(255, 255, 255, 0.12);
+      }
+
+      &_active {
+        color: $dark;
+        background-color: $white;
+
+        &:hover,
+        &:focus {
+          background-color: $white;
+        }
+      }
+    }
+  }
+}

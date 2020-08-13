@@ -1,13 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
-import CategoryRoundedIcon from '@material-ui/icons/CategoryRounded';
-import StraightenRoundedIcon from '@material-ui/icons/StraightenRounded';
-import AccountBalanceWalletRoundedIcon from '@material-ui/icons/AccountBalanceWalletRounded';
-import AttachMoneyRoundedIcon from '@material-ui/icons/AttachMoneyRounded';
-import { ButtonBase } from '@material-ui/core';
 import { Home, Products, Units, Wallets, Transactions } from './pages';
+import { Navbar } from './components';
 
 const theme = createMuiTheme({
   typography: {
@@ -19,56 +14,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <nav className="Navbar">
-          <ul className="Nav">
-            <li className="Nav-Item">
-              <ButtonBase
-                exact
-                to="/"
-                className="Nav-Link"
-                activeClassName="Nav-Link_active"
-                component={NavLink}>
-                <HomeRoundedIcon />
-              </ButtonBase>
-            </li>
-            <li className="Nav-Item">
-              <ButtonBase
-                to="/products"
-                className="Nav-Link"
-                activeClassName="Nav-Link_active"
-                component={NavLink}>
-                <CategoryRoundedIcon />
-              </ButtonBase>
-            </li>
-            <li className="Nav-Item">
-              <ButtonBase
-                to="/units"
-                className="Nav-Link"
-                activeClassName="Nav-Link_active"
-                component={NavLink}>
-                <StraightenRoundedIcon />
-              </ButtonBase>
-            </li>
-            <li className="Nav-Item">
-              <ButtonBase
-                to="/wallets"
-                className="Nav-Link"
-                activeClassName="Nav-Link_active"
-                component={NavLink}>
-                <AccountBalanceWalletRoundedIcon />
-              </ButtonBase>
-            </li>
-            <li className="Nav-Item">
-              <ButtonBase
-                to="/transactions"
-                className="Nav-Link"
-                activeClassName="Nav-Link_active"
-                component={NavLink}>
-                <AttachMoneyRoundedIcon />
-              </ButtonBase>
-            </li>
-          </ul>
-        </nav>
+        <Navbar />
         <main className="Content">
           <Switch>
             <Route exact path="/" component={Home} />
