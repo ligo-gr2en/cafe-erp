@@ -21,48 +21,48 @@ const App = () => {
       <Router>
         <nav className="Navbar">
           <ul className="Nav">
-            <li className="Nav__Item">
+            <li className="Nav-Item">
               <ButtonBase
                 exact
                 to="/"
-                className="Nav__Link"
-                activeClassName="Nav__Link_active"
+                className="Nav-Link"
+                activeClassName="Nav-Link_active"
                 component={NavLink}>
                 <HomeRoundedIcon />
               </ButtonBase>
             </li>
-            <li className="Nav__Item">
+            <li className="Nav-Item">
               <ButtonBase
                 to="/products"
-                className="Nav__Link"
-                activeClassName="Nav__Link_active"
+                className="Nav-Link"
+                activeClassName="Nav-Link_active"
                 component={NavLink}>
                 <CategoryRoundedIcon />
               </ButtonBase>
             </li>
-            <li className="Nav__Item">
+            <li className="Nav-Item">
               <ButtonBase
                 to="/units"
-                className="Nav__Link"
-                activeClassName="Nav__Link_active"
+                className="Nav-Link"
+                activeClassName="Nav-Link_active"
                 component={NavLink}>
                 <StraightenRoundedIcon />
               </ButtonBase>
             </li>
-            <li className="Nav__Item">
+            <li className="Nav-Item">
               <ButtonBase
                 to="/wallets"
-                className="Nav__Link"
-                activeClassName="Nav__Link_active"
+                className="Nav-Link"
+                activeClassName="Nav-Link_active"
                 component={NavLink}>
                 <AccountBalanceWalletRoundedIcon />
               </ButtonBase>
             </li>
-            <li className="Nav__Item">
+            <li className="Nav-Item">
               <ButtonBase
                 to="/transactions"
-                className="Nav__Link"
-                activeClassName="Nav__Link_active"
+                className="Nav-Link"
+                activeClassName="Nav-Link_active"
                 component={NavLink}>
                 <AttachMoneyRoundedIcon />
               </ButtonBase>
