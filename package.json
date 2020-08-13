@@ -30,7 +30,7 @@
   "lint-staged": {
     "src/**/*.{js,jsx}": [
       "eslint --fix src/",
-      "stylelint --fix '**/*.{css,js,jsx}'",
+      "stylelint --fix '**/*.{scss,js,jsx}'",
       "git add"
     ]
   },
