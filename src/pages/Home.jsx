@@ -1,8 +1,11 @@
 import React from 'react';
+import { GreetingCard } from '../components';
 
 const Home = () => {
   return (
-    <h1>Главная</h1>
+    <>
+      <GreetingCard name="Алмаз" />
+    </>
   );
 };
 
