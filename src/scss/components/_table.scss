@@ -1,0 +1,50 @@
+.Table {
+  width: 100%;
+  margin-top: 24px;
+  font-size: 0.875rem;
+  line-height: 2.625rem;
+  border-collapse: collapse;
+
+  &Container {
+    width: 720px;
+    max-width: 720px;
+  }
+
+  &Head {
+    font-weight: 600;
+  }
+
+  &Body {
+    border-radius: 12px;
+  }
+
+  &Body &Cell {
+    font-weight: 400;
+  }
+
+  &Body &Row {
+    border-bottom-color: rgba(0, 0, 0, 0.12);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &Cell {
+    padding-left: 1rem;
+    text-align: left;
+
+    &:first-child {
+      padding-left: 0.5rem;
+      text-align: center;
+      width: 3rem;
+    }
+
+    &:last-child {
+      padding-right: 1rem;
+      text-align: right;
+    }
+  }
+}

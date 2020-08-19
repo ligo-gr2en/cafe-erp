@@ -1,14 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 import { Home, Products, Units, Wallets, Transactions } from './pages';
 import { Navbar } from './components';
-
-const theme = createMuiTheme({
-  typography: {
-    fontFamily: '"Open Sans", sans-serif',
-  },
-});
+import theme from './theme';
 
 const App = () => {
   return (

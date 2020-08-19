@@ -1,3 +1,9 @@
 export { default as Navbar } from './Navbar';
 export { default as Card } from './Card';
 export { default as GreetingCard } from './Card/GreetingCard';
+export { default as Table } from './Table';
+export { default as TableContainer } from './Table/TableContainer';
+export { default as TableHead } from './Table/TableHead';
+export { default as TableBody } from './Table/TableBody';
+export { default as TableRow } from './Table/TableRow';
+export { default as TableCell } from './Table/TableCell';
