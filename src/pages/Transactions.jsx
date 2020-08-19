@@ -16,7 +16,7 @@ const Transactions = () => {
     <>
       <Typography variant="h1">Транзакции</Typography>
       <TableContainer>
-        <Table>
+        <Table aria-label="transactions table">
           <TableHead>
             <TableRow>
               <TableCell>#</TableCell>

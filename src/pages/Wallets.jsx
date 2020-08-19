@@ -15,7 +15,7 @@ const Wallets = () => {
     <>
       <Typography variant="h1">Кошельки</Typography>
       <TableContainer>
-        <Table>
+        <Table aria-label="wallets table">
           <TableHead>
             <TableRow>
               <TableCell>#</TableCell>

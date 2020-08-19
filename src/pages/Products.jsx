@@ -16,7 +16,7 @@ const Products = () => {
     <>
       <Typography variant="h1">Продукты</Typography>
       <TableContainer>
-        <Table className="Table" aria-label="products table">
+        <Table aria-label="products table">
           <TableHead>
             <TableRow>
               <TableCell>#</TableCell>

@@ -13,7 +13,7 @@ const Units = () => {
     <>
       <Typography variant="h1">Единицы измерения</Typography>
       <TableContainer>
-        <Table>
+        <Table aria-label="units table">
           <TableHead>
             <TableRow>
               <TableCell>#</TableCell>
