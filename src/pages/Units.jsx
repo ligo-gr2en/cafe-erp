@@ -1,14 +1,44 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MoreHorizRoundedIcon from '@material-ui/icons/MoreHorizRounded';
-import { Table, TableContainer, TableHead, TableBody, TableRow, TableCell } from '../components';
-
-const items = [
-  { id: 0, name: 'Штук', shortName: 'шт.' },
-];
+import {
+  Table,
+  TableContainer,
+  TableHead,
+  TableBody,
+  TableRow,
+  TableCell,
+  TablePopover,
+} from '../components';
+import { deleteUnit } from '../redux/actions/units';
+import { toggleTablePopover } from '../redux/actions/ui';
 
 const Units = () => {
+  const [popoverAnchor, setPopoverAnchor] = React.useState(null);
+  const [selectedItemId, setSelectedItemId] = React.useState();
+  
+  const dispatch = useDispatch();
+  const items = useSelector(({ units }) => units.items);
+  const showTablePopover = useSelector(({ ui }) => ui.showTablePopover);
+
+  const handlePopoverOpen = React.useCallback((event, itemId) => {
+    setSelectedItemId(itemId);
+    dispatch(toggleTablePopover());
+    setPopoverAnchor(event.currentTarget);
+  }, []);
+
+  const handlePopoverClose = React.useCallback(() => {
+    dispatch(toggleTablePopover());
+    setPopoverAnchor(null);
+  }, []);
+
+  const handleItemDelete = React.useCallback(() => {
+    dispatch(toggleTablePopover());
+    dispatch(deleteUnit(selectedItemId));
+  }, [selectedItemId]);
+
   return (
     <>
       <Typography variant="h1">Единицы измерения</Typography>
@@ -33,12 +63,17 @@ const Units = () => {
                 <TableCell>{name}</TableCell>
                 <TableCell>{shortName}</TableCell>
                 <TableCell>
-                  <IconButton>
+                  <IconButton onClick={(event) => handlePopoverOpen(event, id)}>
                     <MoreHorizRoundedIcon />
                   </IconButton>
                 </TableCell>
               </TableRow>
             ))}
+            <TablePopover
+              open={showTablePopover}
+              anchorEl={popoverAnchor}
+              onClose={handlePopoverClose}
+              onDeleteButtonClick={handleItemDelete} />
           </TableBody>
         </Table>
       </TableContainer>

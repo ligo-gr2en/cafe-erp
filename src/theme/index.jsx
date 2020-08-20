@@ -1,6 +1,11 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
+  palette: {
+    secondary: {
+      main: '#3f826d',
+    },
+  },
   typography: {
     fontFamily: '"Open Sans", sans-serif',
     h1: {
