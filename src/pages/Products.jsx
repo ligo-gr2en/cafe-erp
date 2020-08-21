@@ -11,6 +11,7 @@ import {
   TableRow,
   TableCell,
   TablePopover,
+  TableActions,
 } from '../components';
 import { deleteProduct } from '../redux/actions/products';
 import { toggleTablePopover } from '../redux/actions/ui';
@@ -43,6 +44,7 @@ const Products = () => {
     <>
       <Typography variant="h1">Продукты</Typography>
       <TableContainer>
+        <TableActions />
         <Table aria-label="products table">
           <TableHead>
             <TableRow>

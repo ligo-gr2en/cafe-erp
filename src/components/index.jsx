@@ -8,3 +8,5 @@ export { default as TableBody } from './Table/TableBody';
 export { default as TableRow } from './Table/TableRow';
 export { default as TableCell } from './Table/TableCell';
 export { default as TablePopover } from './Popover/TablePopover';
+export { default as TableActions } from './Table/TableActions';
+export { default as Fab } from './Fab';
